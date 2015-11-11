@@ -1,0 +1,3 @@
+#pass_word_encoder_homepage:
+#    path:     /hello/{name}
+#    defaults: { _controller: PassWordEncoderBundle:Default:index }

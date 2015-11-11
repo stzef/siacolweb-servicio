@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+	<div class="container">
+		<div class="row header middle center">
+			<div class="col-2">
+				<a href="/menu" class="atras">atrás</a>
+			</div>
+			<div class="col-10">
+				<h3>
+					Consultar Notas
+				</h3>
+			</div>
+		</div>
+		<div class="container separator-bottom">
+			<form action="" method="GET">
+				<div class="row bottom">
+					<div class="col-8">
+						<label for="periodo">Periodo:</label>
+						<select name="periodo" id="periodo">
+							<option disabled selected>Seleccione</option>
+							{% for periodo in periodos%}
+								<option value="{{ periodo.getSigla() }}">
+									{{ periodo.getNperi() | lower }}
+								</option>
+							{% endfor %}
+						</select>
+					</div>
+					<div class="col-4">
+						<button type="submit">buscar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+			
+		<div class="container separator-bottom">
+			<div class="row">
+				{% if periodoActual %}
+					<span>{{ periodoActual.getSigla() }} - {{ periodoActual.getNperi() | lower }}</span>
+				{% endif %}
+			</div>	
+		</div>
+
+		<div class="container notas">
+			{% if notas %}
+				<div class="row">
+					<h4>Notas</h4>
+				</div>
+				<div class="row">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Materia</th>
+								<th>Nota</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for materia, nota  in notas %}
+								<tr>
+									<td>
+										{{materia}}
+									</td>
+									<td>
+										{% if nota %}
+											{{nota}}
+										{% else %}
+											<span> - </span>
+										{% endif %}
+									</td>		
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+# Archivo con parametros de configuracion para conexion a base de datos
+driver: pdo_mysql
+host: 127.0.0.1
+port: 3306
+dbname: siacolwe_2016sumapaz
+user: root
+password: null
+charset:  UTF8 

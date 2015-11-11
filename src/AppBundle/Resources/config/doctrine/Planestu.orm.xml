@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Planestu" table="planestu">
+    <indexes>
+      <index name="planestu_FKIndex1" columns="cgrupo"/>
+      <index name="planestu_FKIndex2" columns="cmate"/>
+      <!--<index name="planestu_FKIndex3" columns="cprofe"/>-->
+    </indexes>
+    <id name="cgrupo" type="string" column="cgrupo" length="8"/>
+    <!--<id name="cprofe" type="string" column="cprofe" length="4"/>-->
+    <id name="cmate" type="string" column="cmate" length="6"/>
+    <field name="ifperi1" type="boolean" column="ifperi1" nullable="false">
+      <options>
+        <option name="comment">valido primer periodo</option>
+      </options>
+    </field>
+    <field name="ifperi2" type="boolean" column="ifperi2" nullable="false">
+      <options>
+        <option name="comment">valido segundo periodo</option>
+      </options>
+    </field>
+    <field name="ifperi3" type="boolean" column="ifperi3" nullable="false">
+      <options>
+        <option name="comment">valido tercer periodo</option>
+      </options>
+    </field>
+    <field name="ifperi4" type="boolean" column="ifperi4" nullable="false">
+      <options>
+        <option name="comment">valido cuarto periodo</option>
+      </options>
+    </field>
+    <field name="peso" type="decimal" column="peso" precision="5" scale="2" nullable="true"/>
+    <field name="ihs" type="integer" column="ihs" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="calif" type="boolean" column="calif" nullable="false">
+      <options>
+        <option name="comment">1 si es calificable</option>
+        <option name="default">1</option>
+      </options>
+    </field>
+    <field name="activo" type="boolean" column="activo" nullable="true"/>
+  </entity>
+</doctrine-mapping>

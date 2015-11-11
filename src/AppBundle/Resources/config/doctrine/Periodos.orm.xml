@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Periodos" table="periodos">
+    <id name="cperi" type="string" column="cperi" length="3">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="sigla" type="string" column="sigla" length="3" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="nperi" type="string" column="nperi" length="40" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="peso" type="integer" column="peso" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="orden" type="integer" column="orden" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="tipo" type="string" column="tipo" length="1" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="estado" type="boolean" column="estado" nullable="false"/>
+    <field name="mesi" type="integer" column="mesi" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="mesf" type="integer" column="mesf" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="ano" type="string" column="ano" length="5" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Notasfinal" table="notasfinal">
+    <indexes>
+      <index name="notasfinal_FKIndex1" columns="cestafin"/>
+    </indexes>
+    <id name="ano" type="string" column="ano" length="4"/>
+    <id name="peri" type="string" column="peri" length="3"/>
+    <id name="calum" type="string" column="calum" length="8"/>
+    <field name="cestafin" type="string" column="cestafin" length="2" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

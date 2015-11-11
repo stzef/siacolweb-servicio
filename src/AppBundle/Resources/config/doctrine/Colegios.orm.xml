@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Colegios" table="colegios">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="ccole" type="string" column="ccole" length="9" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ncole" type="string" column="ncole" length="80" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="nit" type="string" column="nit" length="9" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="telefono" type="string" column="telefono" length="15" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="direccion" type="string" column="direccion" length="60" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="dv" type="string" column="dv" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cdepto" type="string" column="cdepto" length="4" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cmuni" type="string" column="cmuni" length="6" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="anoelect" type="string" column="anoelect" length="5" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cdanenuevo" type="string" column="cdanenuevo" length="20" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cdaneantiguo" type="string" column="cdaneantiguo" length="20" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="consecutivo" type="string" column="consecutivo" length="20" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="rector" type="string" column="rector" length="80" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="idrector" type="string" column="idrector" length="12" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="secretario" type="string" column="secretario" length="80" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="idsecretario" type="string" column="idsecretario" length="12" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="nrapido" type="string" column="nrapido" length="20" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="activo" type="boolean" column="activo" nullable="true"/>
+    <field name="cerrado" type="boolean" column="cerrado" nullable="true"/>
+    <field name="logo1" type="string" column="logo1" length="60" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="logo2" type="string" column="logo2" length="60" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="logo3" type="string" column="logo3" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="logo4" type="string" column="logo4" length="60" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="logo5" type="string" column="logo5" length="60" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="banner1" type="string" column="banner1" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">path banner</option>
+      </options>
+    </field>
+    <field name="banner2" type="string" column="banner2" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">path</option>
+      </options>
+    </field>
+    <field name="banner3" type="string" column="banner3" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">path</option>
+      </options>
+    </field>
+    <field name="banner4" type="string" column="banner4" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">path</option>
+      </options>
+    </field>
+    <field name="banner5" type="string" column="banner5" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">path</option>
+      </options>
+    </field>
+    <field name="emailpnotas" type="string" column="emailpnotas" length="80" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

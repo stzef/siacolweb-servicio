@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Alumnos" table="alumnos">
+    <indexes>
+      <index name="alumnos_FKIndex1" columns="cgrupo"/>
+      <index name="alumnos_FKIndex2" columns="cesta"/>
+      <index name="fk_alumnos_tiposdoc" columns="ctipo"/>
+      <index name="cmuniexpe" columns="cmuniexpe"/>
+      <index name="cdeptoexpe" columns="cdeptoexpe"/>
+    </indexes>
+    <id name="calum" type="string" column="calum" length="8">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idalum" type="string" column="idalum" length="12" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+        <option name="comment">Identificacion alumno</option>
+      </options>
+    </field>
+    <field name="ape1alum" type="string" column="ape1alum" length="20" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+        <option name="comment">Primer Apellido</option>
+      </options>
+    </field>
+    <field name="ape2alum" type="string" column="ape2alum" length="20" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+        <option name="comment">Segundo Apellido</option>
+      </options>
+    </field>
+    <field name="nom1alum" type="string" column="nom1alum" length="20" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+        <option name="comment">Primer Nombre</option>
+      </options>
+    </field>
+    <field name="nom2alum" type="string" column="nom2alum" length="20" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+        <option name="comment">Segundo Nombre</option>
+      </options>
+    </field>
+    <field name="repeco" type="string" column="repeco" length="80" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="fnaci" type="date" column="fnaci" nullable="true">
+      <options>
+        <option name="comment">Fecha Nacimiento</option>
+      </options>
+    </field>
+    <field name="foto" type="text" column="foto" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Foto del alumno</option>
+      </options>
+    </field>
+    <field name="rh" type="string" column="rh" length="4" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="restric" type="string" column="restric" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">F</option>
+      </options>
+    </field>
+    <field name="obsealum" type="string" column="obsealum" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="usuobse" type="integer" column="usuobse" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="obseboletin" type="text" column="obseboletin" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="cgrupo" target-entity="Grupos" fetch="LAZY">
+      <join-columns>
+        <join-column name="cgrupo" referenced-column-name="cgrupo"/>
+      </join-columns>
+    </many-to-one>
+    <!--<many-to-one field="cesta" target-entity="Estados" fetch="LAZY">
+      <join-columns>
+        <join-column name="cesta" referenced-column-name="cesta"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="ctipo" target-entity="Tiposdoc" fetch="LAZY">
+      <join-columns>
+        <join-column name="ctipo" referenced-column-name="ctipo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="cdeptoexpe" target-entity="Departamentos" fetch="LAZY">
+      <join-columns>
+        <join-column name="cdeptoexpe" referenced-column-name="cdepto"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="cmuniexpe" target-entity="Municipios" fetch="LAZY">
+      <join-columns>
+        <join-column name="cmuniexpe" referenced-column-name="cmuni"/>
+      </join-columns>
+    </many-to-one>
+    -->
+  </entity>
+</doctrine-mapping>

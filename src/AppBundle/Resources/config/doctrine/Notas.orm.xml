@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Notas" table="notas">
+    <indexes>
+      <index name="notas_FKIndex1" columns="cmate"/>
+      <index name="notas_FKIndex2" columns="calum"/>
+      <index name="notas_FKIndex3" columns="cvalotot"/>
+    </indexes>
+    <id name="cnota" type="integer" column="cnota">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="ano" type="string" column="ano" length="4" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="peri" type="string" column="peri" length="3" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cmate" type="string" column="cmate" length="6" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="calum" type="string" column="calum" length="8" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="notastot" type="decimal" column="notastot" precision="10" scale="2" nullable="true"/>
+    <field name="cvalotot" type="string" column="cvalotot" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="obser" type="string" column="obser" length="300" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="fj" type="integer" column="fj" nullable="true">
+      <options>
+        <option name="unsigned">1</option>
+      </options>
+    </field>
+    <field name="fi" type="integer" column="fi" nullable="true">
+      <options>
+        <option name="unsigned">1</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

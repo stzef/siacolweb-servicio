@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Notasdeta" table="notasdeta">
+    <indexes>
+      <index name="notasdeta_FKIndex1" columns="cnota"/>
+    </indexes>
+    <id name="conse" type="integer" column="conse"/>
+    <id name="cnota" type="integer" column="cnota"/>
+    <field name="clogro" type="string" column="clogro" length="9" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="notapar" type="decimal" column="notapar" precision="10" scale="2" nullable="true"/>
+    <field name="cvalopar" type="string" column="cvalopar" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="notaR1" type="decimal" column="nota_r1" precision="10" scale="2" nullable="true"/>
+    <field name="cvaloR1" type="string" column="cvalo_r1" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="notaR2" type="decimal" column="nota_r2" precision="10" scale="2" nullable="true"/>
+    <field name="cvaloR2" type="string" column="cvalo_r2" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="notaDefi" type="decimal" column="nota_defi" precision="10" scale="2" nullable="true"/>
+    <field name="cvaloDefi" type="string" column="cvalo_defi" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

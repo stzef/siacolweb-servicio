@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Alumnosdeta" table="alumnosdeta">
+    <id name="numregalum" type="string" column="numregalum" length="15">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="calum" type="string" column="calum" length="8" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="idalum" type="string" column="idalum" length="20" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ctipo" type="integer" column="ctipo" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="cmuniexp" type="string" column="cmuniexp" length="6" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="fregistro" type="date" column="fregistro" nullable="true"/>
+    <field name="genero" type="string" column="genero" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="fnaci" type="date" column="fnaci" nullable="true"/>
+    <field name="cmuninaci" type="string" column="cmuninaci" length="6" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ape1alum" type="string" column="ape1alum" length="25" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ape2alum" type="string" column="ape2alum" length="25" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="nom1alum" type="string" column="nom1alum" length="25" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="nom2alum" type="string" column="nom2alum" length="25" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="direccion" type="string" column="direccion" length="50" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="barrio" type="string" column="barrio" length="30" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cmunires" type="string" column="cmunires" length="6" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="zona" type="string" column="zona" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="comuna" type="string" column="comuna" length="30" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="telefono" type="string" column="telefono" length="20" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="celular" type="string" column="celular" length="15" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="email" type="string" column="email" length="40" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="eps" type="string" column="eps" length="40" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ips" type="string" column="ips" length="40" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ars" type="string" column="ars" length="40" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="numsisben" type="string" column="numsisben" length="15" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="nivelsisben" type="string" column="nivelsisben" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="estrato" type="string" column="estrato" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="rh" type="string" column="rh" length="4" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="pobvictconflic" type="string" column="pobvictconflic" length="40" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="fexpul" type="date" column="fexpul" nullable="true"/>
+    <field name="cmuniexpul" type="string" column="cmuniexpul" length="6" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="tiposdecapacidades" type="text" column="tiposdecapacidades" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="tiposdiscapacidades" type="text" column="tiposdiscapacidades" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="cabezadefamilia" type="string" column="cabezadefamilia" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="beneficiariodemadre" type="string" column="beneficiariodemadre" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="beneficiariofpublicas" type="string" column="beneficiariofpublicas" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="beneficiarioheroen" type="string" column="beneficiarioheroen" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="etnia" type="string" column="etnia" length="45" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="resguardo" type="string" column="resguardo" length="45" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

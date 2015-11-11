@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Notasestado" table="notasestado">
+    <id name="ano" type="integer" column="ano"/>
+    <id name="peri" type="integer" column="peri"/>
+    <id name="codalum" type="string" column="codalum" length="10"/>
+    <id name="grado" type="string" column="grado" length="15"/>
+    <field name="cesta" type="string" column="cesta" length="2" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

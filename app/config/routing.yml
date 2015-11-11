@@ -1,0 +1,7 @@
+pass_word_encoder:
+    resource: "@PassWordEncoderBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Grupos" table="grupos">
+    <indexes>
+      <index name="grupos_FKIndex1" columns="cgrado"/>
+      <index name="grupos_FKIndex2" columns="cjorna"/>
+      <index name="grupos_FKIndex3" columns="csede"/>
+      <index name="fk_grupos_profes" columns="cdirec"/>
+    </indexes>
+    <id name="cgrupo" type="string" column="cgrupo" length="8">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="csede" type="string" column="csede" length="2" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cjorna" type="string" column="cjorna" length="2" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cgrado" type="string" column="cgrado" length="2" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ngrupo" type="string" column="ngrupo" length="80" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="ngrupoalt" type="string" column="ngrupoalt" length="80" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="cdirec" type="string" column="cdirec" length="4" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="tifocano" type="integer" column="tifocano" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">1</option>
+      </options>
+    </field>
+    <field name="tibope" type="string" column="tibope" length="30" nullable="false">
+      <options>
+        <option name="fixed"/>
+        <option name="default">boletinfinalxareas</option>
+      </options>
+    </field>
+    <field name="activo" type="boolean" column="activo" nullable="true"/>
+  </entity>
+</doctrine-mapping>

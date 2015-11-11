@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12 center"> 
+				<h3>Seleccione su colegio</h3>	
+			</div>
+		</div>
+		<div class="container">	
+			{% for empresa in empresas %}
+			<div class="row middle colegio" onclick="load(this)">
+				<input type="hidden" class="ccolegio" name="colegio" value="{{empresa.getCempre()}}">
+		        <div class="col-4 center colegio-logo">
+			        <figure>
+			        	<img src="{{ asset("bundles/app/img/logo.png") }}" alt="{{empresa.getNempre()}}" width="50">
+			        </figure>
+		        </div>
+		        <div class="col-8 ">
+			        {{empresa.getNempre()}}
+		        </div>
+			</div>
+	    	{% endfor %}
+	    	<div class="row">
+	    		<div class="col-12 center">
+	    			...
+	    		</div>
+	    	</div>
+		</div>
+	</div>
+{% endblock %}
+{% block scripts %}
+	<script>
+		// PENDIENTE 
+		function load (obj) {
+			var colegio_row = obj;
+			var c_colegio
+
+			// PENDIENTE REFACTORIZAR BUCLE for CON childNodes.length
+			for (var i = 0; i < 7 ; i++) 
+			{
+				if (colegio_row.childNodes[i].className == "ccolegio"){
+					c_colegio = colegio_row.childNodes[i]
+					break
+				}
+			}
+			window.location = "/init/"+c_colegio.value
+		}
+	</script>
+{% endblock %}
