@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="AppBundle\Entity\Grupos" table="grupos">
+    <!--
     <indexes>
       <index name="grupos_FKIndex1" columns="cgrado"/>
       <index name="grupos_FKIndex2" columns="cjorna"/>
       <index name="grupos_FKIndex3" columns="csede"/>
       <index name="fk_grupos_profes" columns="cdirec"/>
     </indexes>
+  -->
     <id name="cgrupo" type="string" column="cgrupo" length="8">
       <generator strategy="IDENTITY"/>
     </id>

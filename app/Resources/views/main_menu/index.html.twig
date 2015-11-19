@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 {% block content %}
+<div class="row header center" style="border-bottom:2px solid #004A67">
+	<h3 style="color: #004A67">
+		Menú principal
+	</h3>
+</div>
 <div class="container">
-	<div class="row header center">
-		<h3>
-			Menú principal
-		</h3>
-	</div>
 	<div class="container">
-		<div class="row">
-			<p>{{ usuario.getAlias() }}</p>
+		<div class="row end">
+			<p class="username">{{ usuario.getAlias() }}</p>
 		</div>
 	</div>
 	<div class="container">
